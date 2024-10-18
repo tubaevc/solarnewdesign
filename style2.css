@@ -1,0 +1,72 @@
+header {
+  margin-top: 30px;
+  background-color: #81b214;
+  padding: 15px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+header .logo {
+  flex: 1;
+  text-align: left;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header nav {
+  flex: 1;
+  text-align: right;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+  font-size: 24px;
+  line-height: 28.8px;
+  letter-spacing: -0.02em;
+}
+
+header nav ul li {
+  margin-left: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Lato TR Light;
+}
+
+.highlight {
+  display: block;
+  margin-top: 10px;
+}
+
+header nav ul li a.btn-group {
+  background-color: #0b1731;
+  padding: 8px 16px;
+  border-radius: 2px;
+}
+.logo,
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 50px;
+}

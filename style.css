@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato TR", sans-serif;
+  font-family: "Lato TR Hairline", sans-serif;
+  font-family: "Lato TR Light", sans-serif;
+  font-family: "Lato TR Black", sans-serif;
+}
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+header {
+  margin-top: 30px;
+  background-color: rgba(122, 172, 11, 0.5);
+  padding: 15px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+header .logo {
+  flex: 1;
+  text-align: left;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header nav {
+  flex: 1;
+  text-align: right;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+  font-size: 24px;
+  line-height: 28.8px;
+  letter-spacing: -0.02em;
+}
+
+header nav ul li {
+  margin-left: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: Lato TR;
+  font-weight: 300;
+}
+
+.highlight {
+  display: block;
+  margin-top: 10px;
+}
+
+header nav ul li a.btn-group {
+  background-color: #0b1731;
+  padding: 8px 16px;
+  border-radius: 2px;
+}
+.logo,
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 50px;
+}
+
+section.hero {
+  height: 120vh;
+  width: 100%;
+  /* height: 150vh; */
+  background: url("mainbg.jpg") no-repeat center center/cover;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section.hero .content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  text-align: left;
+  padding-left: 225px;
+}
+
+section.hero .content h1 {
+  font-size: 75px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+section.hero .content h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: Lato TR Light;
+}
+
+section.hero .content .btn {
+  background-color: #81b214;
+  padding: 15px 30px;
+  border-radius: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.more-btn {
+  padding-top: 20px;
+}
+
+section.hero .content .btn:hover {
+  background-color: #228b22;
+}
+
+@media (max-width: 768px) {
+  header .logo h1 {
+    font-size: 18px;
+  }
+
+  header nav ul li a {
+    font-size: 14px;
+  }
+
+  section.hero .content h1 {
+    font-size: 32px;
+  }
+
+  section.hero .content h2 {
+    font-size: 18px;
+  }
+
+  section.hero .content .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, #092044 11.5%, #2c69a9 100%);
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+.stat-item {
+  text-align: center;
+  color: white;
+  width: 300px;
+}
+.stat-icon {
+  height: 100px;
+  color: #7cba01;
+  margin-bottom: 10px;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(3, 380px);
+  gap: 20px;
+  width: 100%;
+  background: linear-gradient(90deg, #092044 11.5%, #2c69a9 100%);
+  padding: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-content: center;
+}
+.stat-item {
+  text-align: center;
+  color: white;
+  width: 390px;
+}
+.stat-icon {
+  height: 100px;
+  color: #7cba01;
+  margin-bottom: 10px;
+}
+.stat-number {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.stat-text {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-left: 7px;
+  text-align: center;
+  font-family: Lato TR Light;
+}
+.stat-description {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  font-family: Lato TR Light;
+}
+.stat-header {
+  display: flex;
+  justify-content: center;
+}
+.about {
+  width: 100%;
+  height: 730px;
+  background-color: #81b214;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.picture-area {
+  width: 1171px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.text-area {
+  color: #fff;
+  width: 1171px;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Lato TR Light", sans-serif;
+  margin-top: 120px;
+}
+.services {
+  width: 100%;
+  height: 730px;
+  background-color: #f6f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.services-header {
+  color: #81b214;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: center;
+  font-family: "Lato TR", sans-serif;
+}
+
+.services p {
+  font-family: "Lato TR Light", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  width: 730px;
+}
+.service-content {
+  display: grid;
+  grid-template-columns: repeat(3, 390px);
+  gap: 20px;
+}
+.service-image {
+  background-color: #092044;
+  height: 275px;
+  margin-top: 20px;
+}
+.service-item-header {
+  font-size: 24px;
+  font-family: "Lato TR Light", sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  margin-top: 10px;
+}
+.service-item-text {
+  font-size: 18px;
+  font-family: "Lato TR Light", sans-serif;
+  margin-top: 20px;
+  text-align: center;
+}
+.referance {
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.referance-header {
+  color: #81b214;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 48px;
+  text-align: center;
+  font-family: "Lato TR", sans-serif;
+}
+.referance-text {
+  font-family: "Lato TR Light", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  width: 730px;
+}
+.referance-slider {
+  height: 400px;
+  background-color: #092044;
+}
+.contact {
+  width: 80%;
+  height: 500px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 730px;
+  gap: 50px;
+}
+.contact-form {
+  width: 50%;
+  background-color: #092044;
+}
+.contact-header {
+  padding-bottom: 10px;
+  font-size: 24px;
+  color: #81b214;
+}
+.contact-text {
+  font-family: Lato TR Light;
+}
+.sponsor {
+  background: url("sponsor.png") no-repeat center center/cover;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+}
+.sponsor-header {
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+  z-index: 2;
+  position: relative;
+}
+.sponsor-text {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-family: Lato TR Light;
+  z-index: 2;
+  position: relative;
+}
+.sponsor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: blur(2px);
+  z-index: 1;
+  pointer-events: none;
+}
+.sponsor-logos {
+  position: relative;
+  z-index: 2;
+}
+footer {
+  padding: 40px 20px;
+  background-color: #81b214;
+}
+.footer-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.footer-about,
+.footer-menu,
+.footer-service,
+.footer-social-media {
+  padding: 20px;
+  text-align: left;
+}
+.footer-menu-header {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  color: white;
+}
+.footer-service-header,
+.footer-social-header {
+  padding-bottom: 30px;
+  padding-top: 20px;
+  color: white;
+}
+
+.footer-menu a,
+.footer-service-links a {
+  text-decoration: none;
+  color: white;
+  font-family: Lato TR Light;
+  display: block;
+  padding-top: 10px;
+}
+.footer-about img {
+  max-width: 100%;
+  height: 50px;
+}
+
+.footer-about-text {
+  margin-top: 15px;
+  font-family: Lato TR Light;
+  font-size: 15px;
+  color: white;
+}
+.footer-social-links {
+  display: flex;
+
+  gap: 10px;
+}
+
+@media (max-width: 1170px) {
+  footer {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
