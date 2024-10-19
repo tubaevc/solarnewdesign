@@ -1,3 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato TR", sans-serif;
+  font-family: "Lato TR Hairline", sans-serif;
+  font-family: "Lato TR Light", sans-serif;
+  font-family: "Lato TR Black", sans-serif;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
 header {
   margin-top: 30px;
   background-color: #81b214;
@@ -69,4 +84,380 @@ header nav ul li a.btn-group {
 
 .menu li {
   margin-left: 50px;
+}
+
+footer {
+  padding: 40px 20px;
+  background-color: #81b214;
+}
+.footer-container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.footer-about,
+.footer-menu,
+.footer-service,
+.footer-social-media {
+  padding: 20px;
+  text-align: left;
+}
+.footer-menu-header {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  color: white;
+}
+.footer-service-header,
+.footer-social-header {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  color: white;
+}
+.footer-service-links {
+  padding-top: 30px;
+}
+.footer-social-links {
+  padding-top: 10px;
+}
+.footer-menu a,
+.footer-service-links a {
+  text-decoration: none;
+  color: white;
+  font-family: Lato TR Light;
+  display: block;
+  padding-top: 10px;
+}
+.footer-about img {
+  max-width: 100%;
+  height: 50px;
+}
+
+.footer-about-text {
+  margin-top: 15px;
+  font-family: Lato TR Light;
+  font-size: 15px;
+  color: white;
+}
+.footer-social-links {
+  display: flex;
+
+  gap: 10px;
+}
+
+@media (max-width: 1170px) {
+  footer {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+.projects {
+  height: auto;
+  padding-bottom: 50px;
+}
+.project-header {
+  color: #81b214;
+  font-size: 24px;
+  font-family: Lato TR;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  padding-top: 150px;
+}
+.project-text {
+  font-size: 18px;
+  font-family: Lato TR Light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+/* .project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  }
+  .project-card {
+    padding: 20px;
+    text-align: center;
+    }
+    .project-info {
+      margin-top: 10px;
+      }
+      .project-card img {
+        border-radius: 5px;
+        height: 256px;
+        width: 500px;
+        } */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Increased gap for more space between cards */
+  margin-top: 30px;
+}
+.project-card {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Increased height */
+  border-radius: 5px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+}
+.project-info {
+  width: 100%;
+  height: 100%;
+}
+.project-info img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease, transform 0.3s ease; /* Added transform for zoom effect */
+  filter: grayscale(100%);
+}
+.project-card .project-info img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+/* .project-card:hover .project-info img {
+  filter: grayscale(0%);
+  transform: scale(1.05); 
+} */
+.project-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(9, 32, 68, 0) 0%,
+    rgba(9, 32, 68, 0.5) 70%,
+    rgba(7, 26, 44, 0.7) 100%
+  );
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px; /* Increased padding */
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: #4d4d4d;
+}
+
+.project-card .project-text {
+  opacity: 1;
+}
+/* .project-card:hover .project-text {
+  opacity: 1;
+} */
+.project-name {
+  font-size: 22px; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 10px; /* Increased margin */
+  color: whitesmoke;
+}
+.project-power {
+  font-size: 18px; /* Increased font size */
+  color: whitesmoke;
+  font-family: Lato TR Light;
+}
+/* .about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.about-header2 {
+  flex: 2;
+  margin: 20px;
+  text-align: center;
+  font-family: "Lato TR Light", sans-serif;
+}
+.about-text-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.about-text-pr {
+  margin-bottom: 15px;
+}
+.about-img {
+  flex: 1;
+}
+.about-img img {
+  width: 100%;
+  height: auto;
+}
+.about-text {
+  flex: 2;
+  padding-right: 20px;
+}
+*/
+.about {
+  margin: 20px auto;
+  background-color: white;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+.about-header {
+  color: #81b214;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 100px;
+  font-family: Lato TR;
+}
+.about-header2 {
+  font-size: 18px;
+  font-family: Lato TR Light;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.content-wrapper {
+  display: flex;
+}
+.content {
+  flex: 2;
+  padding-right: 20px;
+}
+.sidebar {
+  flex: 2;
+  min-height: 400px;
+}
+.sidebar img {
+  padding-top: 40px;
+  width: 600px;
+  height: 320px;
+}
+.sidebar .img2 {
+  padding-top: 60px;
+  width: 600px;
+  height: 350px;
+}
+.section {
+  margin-bottom: 30px;
+}
+.section-header {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+.section-content {
+  font-size: 16px;
+  font-family: Lato TR Light;
+}
+.contact-text {
+  width: 730px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.text-line {
+  font-family: Lato TR Light;
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #4d4d4d;
+}
+.map {
+  display: flex;
+  justify-content: center;
+}
+.map img {
+  margin-top: 30px;
+  width: 1000px;
+}
+.contact-map {
+  position: relative;
+  width: 90%;
+  max-width: 1575px; /* Haritanın genişliğine uygun olacak şekilde ayarladım */
+  margin: 0 auto;
+  color: #092144;
+}
+.map-text {
+  position: absolute;
+  left: 100px; /* Sol alta yazmak için ayarlandı */
+  bottom: 0px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #092144;
+}
+
+.tel-no,
+.mail-address {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Lato TR Light;
+}
+
+.adresses {
+  margin-top: 20px;
+}
+
+.adresses h1 {
+  font-size: 14px;
+  margin: 0 0 5px;
+}
+
+.adresses p {
+  margin: 0 0 15px;
+  font-family: Lato TR Light;
+}
+
+.tr-adress,
+.romania-adress,
+.budapest-adress {
+  margin-bottom: 10px;
+}
+
+.tr-adress h1,
+.romania-adress h1,
+.budapest-adress h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.contact-form {
+  height: 500px;
+  background-color: #092144;
+  padding-top: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+.services-container {
+  padding-top: 50px;
+}
+.srvc {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.srvc img {
+  padding-top: 0px;
+  height: 170px;
+}
+.services-container {
+  height: 1000px;
 }

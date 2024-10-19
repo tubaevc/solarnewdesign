@@ -10,7 +10,14 @@
     <script
     src="https://kit.fontawesome.com/c99bca40d2.js"
     crossorigin="anonymous"
-  ></script>         
+  ></script>     
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   
   </head>
   <body>
     <header>
@@ -53,7 +60,6 @@
   </section>
 
     <section class="middle">
-      <div class="container"></div>
       <div class="stats-container">
         <div class="stat-item">
           <img class="stat-icon" src="icon3.png"></img>
@@ -108,34 +114,49 @@
         <div class="text-area">Türkiye Elektrik taahhüt sektörünün lider firmaları arasında yer alan Evcil Grup, 1990 yılında aslen Tokatlı olan Dursun Evcil ve Tevfik Evcil kardeşler tarafından kurularak Evcil Elektrik ismiyle Ankara’da sektöre ilk adımı atmıştır. 32 yıllık elektrik taahhüt sektör tecrübesi ile enerji alanında da aynı profesyonellikle sektör ağını genişletmiştir. Evcil Solar dünyanın enerji ihtiyacını temiz kaynaklardan karşılamaya öncülük ederek ülke ekonomisine katkı sağlamayı ve gelecek nesillere yaşanılabilir bir dünya bırakmayı hedefler. Alanında uzman kadrosu ile akıl, sinerji ve güç birliği yaparak çalışmalarını geliştirmeye devam etmektedir.</div>
     </section>
     <section class="services">
+<!-- <div class="container"> -->
+
         <div class="services-header">Hizmetlerimiz</div>
         <p>Türkiye genelinde gerçekleştirdiğimiz projeler, hem müşterilerimize hem de ülkemizin sürdürülebilir enerji geleceğine katkı sağlıyor.</p>
          <div class="service-content">
 <div class="service-item">
-    <div class="service-image"></div>
+    <div class="service-image"><img src="rpa-concept-with-blurry-hand-touching-screen.jpg" alt=""></div>
     <div class="service-item-header">Proje Geliştirme ve Mühendislik</div>
     <div class="service-item-text">Evcil Solar ile gerçekleştireceğiniz güneş enerji santrali başvurusunun ardından tesisinizin ihtiyaçlarını kapsamlı bir fizibilite çalışması ile belirleriz. Bu süreçte, maksimum verimlilik ve yüksek kalite standartlarında sistem bileşenleri kullanarak teklifimizi oluştururuz. </div>
 </div>
 <div class="service-item">
-    <div class="service-image"></div>
+    <div class="service-image"><img src="epc-project.jpg" alt=""></div>
     <div class="service-item-header">EPC Anahtar Teslim ve Kurulum</div>
     <div class="service-item-text">Evcil Solar ile, tüm sistemin kurumunuza özel en ideal şekilde tasarımı, planlanması, taahhütlerin gerçekleştirilmesi ve tesisinizin zamanında devreye alınması hizmetlerini alırsınız. Projelerimiz, yüksek kalite ve güvenilirlik standartlarıyla, ihtiyaçlarınıza en uygun çözümleri sağlamayı hedefler.</div>
 </div>
 <div class="service-item">
-    <div class="service-image"></div>
+    <div class="service-image"><img src="supply.jpg" alt=""></div>
     <div class="service-item-header">Enerji Veri İzleme Sistemleri</div>
     <div class="service-item-text">Yatırımcı ve işletmeci vizyonuyla santraller inşa ederek, müteahhit mantığından uzak bir yaklaşım benimsemekteyiz. Bu sayede, sürdürülebilir ve verimli enerji çözümleri sunarak yatırımcılarımızın uzun vadeli başarılarını güvence altına alıyoruz.</div>
 </div>
 
          </div>
         </div>
-    </section>
+      <!-- </div> -->
+
+      </section>
 
          <section class="referance">
           <div class="container">
             <div class="referance-header">Proje Görsellerimiz</div>
             <div class="referance-text">Türkiye genelinde gerçekleştirdiğimiz projeler, hem müşterilerimize hem de ülkemizin sürdürülebilir enerji geleceğine katkı sağlıyor.</div>
-         <div class="referance-slider">slider</div>
+            <div class="swiper-container">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="projects/abc-solar.png" alt="Proje 1"></div>
+                  <div class="swiper-slide"><img src="projects/alya_bg.jpg" alt="Proje 2"></div>
+                  <div class="swiper-slide"><img src="projects/bianos_bg.jpg" alt="Proje 3"></div>
+                  <!-- Daha fazla slide ekleyebilirsiniz -->
+                </div>
+              </div>
+              <div class=" custom-prev"><i class="fas fa-chevron-left"></i></div>
+              <div class=" custom-next"><i class="fas fa-chevron-right"></i></div>
+         </div>
         </div>
         </section>
 
@@ -148,11 +169,23 @@
                 </div>
                 <div class="contact-item-right">
                     <div class="contact-form">
-                        iletişim formu
+                      <form class="custom-form" action="#" method="post">
+                        <div class="form-group">
+                          <input type="text" name="name" placeholder="Ad Soyad" required>
+                          <input type="tel" name="phone" placeholder="Telefon" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" name="subject" placeholder="Başlık" required>
+                        </div>
+                        <div class="form-group">
+                          <textarea name="message" placeholder="Mesaj" rows="4" required></textarea>
+                        </div>
+                        <button type="submit">Gönder</button>
+                      </form>
                 </div>
                 </div>
             </div>
-            <div class="contact-btn"><button>Gönder</button></div>
+            <!-- <div class="contact-btn"><button>Gönder</button></div> -->
           </div>
         </section>
         <section class="sponsor">
@@ -172,17 +205,17 @@
             </div>
             <div class="footer-menu">
               <div class="footer-menu-header">Menü</div>
-              <div class="footer-menu-links"><a href="index.html">Hakkımızda</a>
-                <a href="index.html">Projelerimiz</a>
-                <a href="index.html">Hizmetlerimiz</a>
-                <a href="index.html">İletişim</a></div>
+              <div class="footer-menu-links"><a href="hakkimizda.html">Hakkımızda</a>
+                <a href="projelerimiz.html">Projelerimiz</a>
+                <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+                <a href="iletisim.html">İletişim</a></div>
             </div>
-            <div class="footer-service"><div class="footer-service-header">Hizmetlerimiz
+            <div class="footer-service"><div class="footer-service-header">Hizmetlerimiz</div>
               <div class="footer-service-links">
-                <a href="index.html">Proje ve Mühendislik</a>
-                <a href="index.html">EPC Anahtar Teslim ve Kurulum</a>
-                <a href="index.html">Enerji Veri İzleme Sistemleri</a></div> 
-              </div>
+                <a href="hizmetlerimiz.html">Proje ve Mühendislik</a>
+                <a href="hizmetlerimiz.html">EPC Anahtar Teslim ve Kurulum</a>
+                <a href="hizmetlerimiz.html">Enerji Veri İzleme Sistemleri</a></div> 
+              
             </div>
             <div class="footer-social-media">
               <div class="footer-social-header">
@@ -198,4 +231,23 @@
         </footer>
 </div>
   </body>
+  <script>
+const swiper = new Swiper('.swiper', {
+
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+    nextEl: '.custom-next',
+    prevEl: '.custom-prev',
+  },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+  });</script> 
 </html>

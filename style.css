@@ -168,16 +168,7 @@ section.hero .content .btn:hover {
     font-size: 16px;
   }
 }
-.stats-container {
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
-  gap: 20px;
-  width: 100%;
-  background: linear-gradient(90deg, #092044 11.5%, #2c69a9 100%);
-  padding: 40px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  justify-content: center;
-}
+
 .stat-item {
   text-align: center;
   color: white;
@@ -191,8 +182,8 @@ section.hero .content .btn:hover {
 
 .stats-container {
   display: grid;
-  grid-template-columns: repeat(3, 380px);
-  gap: 20px;
+  grid-template-columns: repeat(3, 360px);
+  gap: 30px;
   width: 100%;
   background: linear-gradient(90deg, #092044 11.5%, #2c69a9 100%);
   padding: 40px;
@@ -203,7 +194,7 @@ section.hero .content .btn:hover {
 .stat-item {
   text-align: center;
   color: white;
-  width: 390px;
+  width: 360px;
 }
 .stat-icon {
   height: 100px;
@@ -300,10 +291,12 @@ video {
   grid-template-columns: repeat(3, 390px);
   gap: 20px;
 }
-.service-image {
-  background-color: #092044;
+.service-image img {
   height: 275px;
   margin-top: 20px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2px;
 }
 .service-item-header {
   font-size: 24px;
@@ -327,6 +320,7 @@ video {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  padding: 50px 0;
 }
 .referance-header {
   color: #81b214;
@@ -335,6 +329,7 @@ video {
   line-height: 48px;
   text-align: center;
   font-family: "Lato TR", sans-serif;
+  margin-bottom: 20px;
 }
 .referance-text {
   font-family: "Lato TR Light", sans-serif;
@@ -343,13 +338,14 @@ video {
   text-align: center;
   margin: 0;
   width: 730px;
+  margin-bottom: 20px;
+  margin-left: 200px;
 }
 .referance-slider {
   height: 400px;
-  background-color: #092044;
 }
 .contact {
-  width: 80%;
+  width: 100%;
   height: 500px;
   background-color: #fff;
   display: flex;
@@ -361,20 +357,20 @@ video {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 730px;
+  width: 1170px;
   gap: 50px;
 }
-.contact-form {
+.contact-item-left {
   width: 50%;
-  background-color: #092044;
 }
 .contact-header {
   padding-bottom: 10px;
-  font-size: 24px;
+  font-size: 32px;
   color: #81b214;
 }
 .contact-text {
   font-family: Lato TR Light;
+  font-size: 18px;
 }
 .sponsor {
   background: url("sponsor.png") no-repeat center center/cover;
@@ -444,8 +440,12 @@ footer {
 .footer-service-header,
 .footer-social-header {
   padding-bottom: 30px;
-  padding-top: 20px;
+  padding-top: 0px;
   color: white;
+}
+
+.footer-social-links {
+  padding-top: 10px;
 }
 
 .footer-menu a,
@@ -489,4 +489,161 @@ footer {
   footer {
     grid-template-columns: 1fr;
   }
+}
+.custom-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #0b1731;
+  color: white;
+}
+
+.form-group input {
+  flex: 1;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+  width: calc(50% - 5px);
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #0b1731;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #061028; /* Butonun hover rengi */
+}
+
+/* second   */
+/* .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  transition: all 0.3s ease;
+  opacity: 0.4;
+  transform: scale(0.8);
+}
+
+.swiper-slide img {
+  display: block;
+  width: 370px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.swiper-slide-active img {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+} */
+
+.swiper-container {
+  width: 100%; /* Container genişliği tüm sayfa olacak */
+  position: relative; /* Butonlar için gerekli */
+  padding: 40px 0;
+}
+
+.swiper {
+  width: 70%; /* Swiper'ın genişliğini ayarlıyoruz */
+  margin: 0 auto; /* Swiper'ı yatayda ortalıyoruz */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* Resimleri slide içinde yatayda ortalar */
+  align-items: center; /* Resimleri slide içinde dikeyde ortalar */
+}
+
+.swiper-slide img {
+  width: 800px; /* İsteğe bağlı resim genişliği */
+  height: 400px; /* İsteğe bağlı resim yüksekliği */
+  display: block;
+  border-radius: 5px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #81b214;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+}
+.custom-prev,
+.custom-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Buton genişliği */
+  height: 50px; /* Buton yüksekliği */
+  background-color: #7ec442; /* Yeşil arka plan */
+  color: #fff; /* Beyaz ikon */
+  border-radius: 50%; /* Butonu yuvarlak yapmak için */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.custom-prev {
+  left: 10px; /* Sol tarafa yerleştirme */
+}
+
+.custom-next {
+  right: 10px; /* Sağ tarafa yerleştirme */
+}
+
+.custom-prev i,
+.custom-next i {
+  font-size: 18px; /* İkon boyutu */
 }
