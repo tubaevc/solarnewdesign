@@ -23,13 +23,16 @@
     <header>
       <div class="header-container">
         <nav>
-          <ul>
-            <div class="logo">
-              <li>
-                <img src="solarlogo-yeni.png" alt="" />
-              </li>
-            </div>
-            <div class="menu">
+          <div class="logo">
+            <img src="solarlogo-yeni.png" alt="" />
+          </div>
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="menu">
+            <ul>
               <li><a href="index.html">Anasayfa</a></li>
               <li><a href="projelerimiz.html">Galeri</a></li>
               <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
@@ -43,8 +46,8 @@
                   <li><a href="https://www.evisenerji.com/">Evis Enerji</a></li>
                 </ul>
               </li>
-            </div>
-          </ul>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -190,7 +193,7 @@
                   <form id="contactForm" class="custom-form">
 
                     <!-- Replace with your Access Key -->
-                    <input type="hidden" name="access_key" value="APIKEY">
+                    <input type="hidden" name="access_key" value="2736e939-3611-4524-9c8b-687f069e8261">
                    <div class="form-group">
 
                   
@@ -307,5 +310,21 @@ localStorage.setItem('name', params.get('name'));
 localStorage.setItem('phone', params.get('phone'));
 localStorage.setItem('subject', params.get('subject'));
 localStorage.setItem('message', params.get('message'));
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+const overlay = document.querySelector('.overlay');
+
+hamburger.addEventListener('click', function() {
+  hamburger.classList.toggle('active');
+  menu.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', function() {
+  hamburger.classList.remove('active');
+  menu.classList.remove('active');
+  overlay.classList.remove('active');
+});
   </script> 
 </html>

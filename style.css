@@ -31,85 +31,35 @@ header {
   box-sizing: border-box;
 }
 
-header .logo {
-  flex: 1;
-  text-align: left;
-}
-
-header .logo img {
-  height: 40px;
-}
-
 header nav {
-  flex: 1;
-  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 header nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
   font-family: Lato;
   font-size: 24px;
   line-height: 28.8px;
   letter-spacing: -0.02em;
+  width: 100%;
 }
 
-header nav ul li {
-  margin-left: 15px;
-  position: relative;
+.logo {
+  flex: 1;
+  text-align: left;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  font-family: Lato TR;
-  font-weight: 300;
+.logo img {
+  height: 40px;
 }
 
-header nav ul li a.btn-group {
-  background-color: #0b1731;
-  padding: 8px 16px;
-  border-radius: 2px;
-}
-
-header nav ul li .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #0b1731;
-  padding: 0;
-  z-index: 999;
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-  border-radius: 4px;
-}
-
-header nav ul li .dropdown-menu li {
-  margin: 0;
-}
-
-header nav ul li .dropdown-menu li a {
-  color: white;
-  padding: 8px 16px;
-  display: block;
-  white-space: nowrap;
-  text-align: center;
-}
-header nav ul li:hover .dropdown-menu:last-child {
-  padding-bottom: 0;
-}
-
-header nav ul li:hover .dropdown-menu {
-  display: block;
-}
-
-.logo,
 .menu {
   display: flex;
   align-items: center;
@@ -119,10 +69,144 @@ header nav ul li:hover .dropdown-menu {
   margin-left: 50px;
 }
 
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Lato TR";
+  font-weight: 300;
+}
+
+.btn-group {
+  background-color: #0b1731;
+  padding: 8px 16px;
+  border-radius: 2px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #0b1731;
+  padding: 10px 0;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  width: auto;
+}
+
+.dropdown-menu li {
+  margin: 0 !important;
+}
+
+.dropdown-menu li a {
+  padding: 8px 16px;
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+}
+
 .menu .dropdown-menu li a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+    order: 2;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #0b1731;
+    padding: 80px 20px 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .menu ul {
+    flex-direction: column;
+  }
+
+  .menu li {
+    margin: 15px 0;
+    text-align: left;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .dropdown-menu li {
+    padding: 0;
+  }
+
+  .dropdown-menu li a {
+    text-align: left;
+  }
+
+  /* Mobilde butonu yeşil yapalım */
+  .btn-group {
+    background-color: rgb(122, 172, 11);
+    color: white;
+  }
+}
 section.hero {
   height: 120vh;
   width: 100%;
@@ -576,11 +660,6 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #061028;
-}
-
-/* second   */
 .swiper-container {
   width: 100%;
   max-width: 1170px;
