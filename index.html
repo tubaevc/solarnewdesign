@@ -21,35 +21,40 @@
   </head>
   <body>
     <header>
-    <div class="header-container">
-      <nav>
-        <ul>
-          <div class="logo">
-            <li>
-              <img src="solarlogo-yeni.png" alt="" />
-            </li>
-          </div>
-          <div class="menu">
-            <li><a href="index.html">Anasayfa</a></li>
-            <li><a href="projelerimiz.html">Galeri</a></li>
-            <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
-            <li><a href="hakkimizda.html">Hakkımızda</a></li>
-            <li><a href="iletisim.html">İletişim</a></li>
-            <li><a href="#" class="btn-group">Evcil Group</a></li>
-          </div>
-        </ul>
-      </nav>
-      <!-- <a href="#" class="btn-group">Evcil Group</a> -->
-    </div>
-  </header>
-
+      <div class="header-container">
+        <nav>
+          <ul>
+            <div class="logo">
+              <li>
+                <img src="solarlogo-yeni.png" alt="" />
+              </li>
+            </div>
+            <div class="menu">
+              <li><a href="index.html">Anasayfa</a></li>
+              <li><a href="projelerimiz.html">Galeri</a></li>
+              <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
+              <li class="dropdown">
+                <a href="#" class="btn-group">Evcil Group</a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://evcil.com.tr/">Evcil Group</a></li>
+                  <li><a href="https://www.evccharge.com/">Evc Charge</a></li>
+                  <li><a href="https://www.evisenerji.com/">Evis Enerji</a></li>
+                </ul>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
+    </header>
   <section class="hero">
     <div class="container">
       <div class="overlay">
       <div class="content">
         <h2>Güneş Enerji Sistemleri</h2>
         <h1>
-          Evcil Solar ile Güneşten Al <span class="highlight"> Gücüne Kat</span>
+          Güneşten Al <span class="highlight"> Gücüne Kat</span>
         </h1>
        <div class="more-btn">
         <a href="#" class="btn">Daha Fazla</a>
@@ -147,16 +152,30 @@
             <div class="referance-text">Türkiye genelinde gerçekleştirdiğimiz projeler, hem müşterilerimize hem de ülkemizin sürdürülebilir enerji geleceğine katkı sağlıyor.</div>
             <div class="swiper-container">
               <div class="swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="projects/abc-solar.png" alt="Proje 1"></div>
-                  <div class="swiper-slide"><img src="projects/alya_bg.jpg" alt="Proje 2"></div>
-                  <div class="swiper-slide"><img src="projects/bianos_bg.jpg" alt="Proje 3"></div>
-                  <!-- Daha fazla slide ekleyebilirsiniz -->
+                  <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <img src="projects/abc-solar.png" alt="Proje 3">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="projects/alya_bg.jpg" alt="Proje 2">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="projects/ankasanarazi.png" alt="Proje 1">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="projects/bianos_bg.jpg" alt="Proje 3">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="projects/karas_bg.jpg" alt="Proje 2">
+                      </div>
+                      <div class="swiper-slide">
+                          <img src="projects/yon-solar.png" alt="Proje 1">
+                      </div>
+                  </div>
                 </div>
-              </div>
-              <div class=" custom-prev"><i class="fas fa-chevron-left"></i></div>
-              <div class=" custom-next"><i class="fas fa-chevron-right"></i></div>
-         </div>
+                <div class="custom-prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="custom-next"><i class="fas fa-chevron-right"></i></div>
+          </div>
         </div>
         </section>
 
@@ -168,24 +187,39 @@
                     <div class="contact-text">Evcil Solar olarak, projelerinizi en verimli şekilde hayata geçirmeniz için her zaman yanınızdayız. Güneş enerjisi çözümlerimizle ilgili daha fazla bilgi almak, projeleriniz için danışmanlık hizmeti talep etmek veya aklınıza takılan sorular için bize ulaşabilirsiniz. Uzman ekibimiz, size en uygun çözümleri sunmak ve projelerinizi güvenle ileriye taşımak için hazır. Bize telefon, e-posta veya iletişim formumuz aracılığıyla ulaşabilirsiniz. Sizinle çalışmaktan mutluluk duyacağız</div>
                 </div>
                 <div class="contact-item-right">
-                    <div class="contact-form">
-                      <form class="custom-form" action="#" method="post">
-                        <div class="form-group">
-                          <input type="text" name="name" placeholder="Ad Soyad" required>
-                          <input type="tel" name="phone" placeholder="Telefon" required>
-                        </div>
-                        <div class="form-group">
-                          <input type="text" name="subject" placeholder="Başlık" required>
-                        </div>
-                        <div class="form-group">
-                          <textarea name="message" placeholder="Mesaj" rows="4" required></textarea>
-                        </div>
-                        <button type="submit">Gönder</button>
-                      </form>
-                </div>
+                  <form id="contactForm" class="custom-form">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="APIKEY">
+                   <div class="form-group">
+
+                  
+                     <input type="text" id="name" name="name" placeholder="Ad Soyad" required>
+                     <input type="tel" id="phone" name="phone" placeholder="Telefon" required>
+                   </div>
+
+   
+     <div class="form-group">
+
+       <input type="text" id="subject" name="subject" placeholder="Başlık" required>
+     </div>
+
+     <div class="form-group">
+
+       <textarea id="message" name="message" rows="4" placeholder="Mesaj" required></textarea>
+     </div>
+                    <!-- Honeypot Spam Protection -->
+                    <!-- <input type="checkbox" name="botcheck" class="hidden" style="display: none;"> -->
+                
+                
+                    <button type="submit">Gönder</button>
+                
+                </form>
+                <div id="formMessage" style="display:none; color: #81b214;">
+                  Mesajınız başarıyla gönderildi!
+              </div>
                 </div>
             </div>
-            <!-- <div class="contact-btn"><button>Gönder</button></div> -->
           </div>
         </section>
         <section class="sponsor">
@@ -232,22 +266,46 @@
 </div>
   </body>
   <script>
-const swiper = new Swiper('.swiper', {
+   const swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            centeredSlides: true,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.custom-next',
+                prevEl: '.custom-prev',
+            }
+        });
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();  // Sayfanın yeniden yüklenmesini önler
 
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-    nextEl: '.custom-next',
-    prevEl: '.custom-prev',
-  },
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-  });</script> 
+    const formData = new FormData(this);  // Form verilerini alır
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Başarı mesajını göster
+            document.getElementById('formMessage').style.display = 'block';
+        } else {
+            // Hata mesajı veya başka bir aksiyon ekleyebilirsiniz
+            alert("Mesaj gönderilemedi, lütfen tekrar deneyin.");
+        }
+    })
+    .catch(error => {
+        console.error("Hata:", error);
+        alert("Bir hata oluştu, lütfen daha sonra tekrar deneyin.");
+    });
+});
+const params = new URLSearchParams(window.location.search);
+
+localStorage.setItem('access_key', params.get('access_key'));
+localStorage.setItem('name', params.get('name'));
+localStorage.setItem('phone', params.get('phone'));
+localStorage.setItem('subject', params.get('subject'));
+localStorage.setItem('message', params.get('message'));
+  </script> 
 </html>

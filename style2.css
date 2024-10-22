@@ -56,9 +56,9 @@ header nav ul {
   letter-spacing: -0.02em;
 }
 
-header nav ul li {
+/* header nav ul li {
   margin-left: 15px;
-}
+} */
 
 header nav ul li a {
   color: white;
@@ -80,6 +80,7 @@ header nav ul li a.btn-group {
 .logo,
 .menu {
   display: flex;
+  align-items: center;
 }
 
 .menu li {
@@ -93,9 +94,9 @@ footer {
 .footer-container {
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 20px;
-  max-width: 1300px;
+  max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -167,7 +168,7 @@ footer {
 }
 .projects {
   height: auto;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 .project-header {
   color: #81b214;
@@ -186,36 +187,19 @@ footer {
   align-items: center;
   padding-top: 20px;
 }
-/* .project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  }
-  .project-card {
-    padding: 20px;
-    text-align: center;
-    }
-    .project-info {
-      margin-top: 10px;
-      }
-      .project-card img {
-        border-radius: 5px;
-        height: 256px;
-        width: 500px;
-        } */
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 30px; /* Increased gap for more space between cards */
+  gap: 30px;
   margin-top: 30px;
 }
 .project-card {
   position: relative;
   overflow: hidden;
-  height: 300px; /* Increased height */
-  border-radius: 5px; /* Optional: adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .project-info {
   width: 100%;
@@ -225,17 +209,13 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: filter 0.3s ease, transform 0.3s ease; /* Added transform for zoom effect */
+  transition: filter 0.3s ease, transform 0.3s ease;
   filter: grayscale(100%);
 }
 .project-card .project-info img {
   filter: grayscale(0%);
   transform: scale(1.05);
 }
-/* .project-card:hover .project-info img {
-  filter: grayscale(0%);
-  transform: scale(1.05); 
-} */
 .project-text {
   position: absolute;
   bottom: 0;
@@ -246,7 +226,7 @@ footer {
     to bottom,
     rgba(9, 32, 68, 0) 0%,
     rgba(9, 32, 68, 0.5) 70%,
-    rgba(7, 26, 44, 0.7) 100%
+    rgba(7, 26, 44, 0.9) 100%
   );
   color: white;
   display: flex;
@@ -262,56 +242,26 @@ footer {
 .project-card .project-text {
   opacity: 1;
 }
-/* .project-card:hover .project-text {
-  opacity: 1;
-} */
+.project-card:hover .project-text {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 .project-name {
-  font-size: 22px; /* Increased font size */
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 10px; /* Increased margin */
+  margin-bottom: 10px;
   color: whitesmoke;
 }
 .project-power {
-  font-size: 18px; /* Increased font size */
+  font-size: 18px;
   color: whitesmoke;
   font-family: Lato TR Light;
 }
-/* .about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-.about-header2 {
-  flex: 2;
-  margin: 20px;
-  text-align: center;
-  font-family: "Lato TR Light", sans-serif;
-}
-.about-text-header {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.about-text-pr {
-  margin-bottom: 15px;
-}
-.about-img {
-  flex: 1;
-}
-.about-img img {
-  width: 100%;
-  height: auto;
-}
-.about-text {
-  flex: 2;
-  padding-right: 20px;
-}
-*/
 .about {
   margin: 20px auto;
   background-color: white;
-  padding-left: 20px;
   padding-top: 30px;
+  margin-bottom: 70px;
 }
 .about-header {
   color: #81b214;
@@ -325,29 +275,31 @@ footer {
 .about-header2 {
   font-size: 18px;
   font-family: Lato TR Light;
-  margin-bottom: 50px;
   text-align: center;
 }
 .content-wrapper {
   display: flex;
+  margin-top: 30px;
+  gap: 100px;
 }
+
 .content {
   flex: 2;
-  padding-right: 20px;
 }
+
 .sidebar {
   flex: 2;
   min-height: 400px;
 }
+
 .sidebar img {
-  padding-top: 40px;
   width: 600px;
-  height: 320px;
+  height: 300px;
+  margin-bottom: 35px;
 }
-.sidebar .img2 {
-  padding-top: 60px;
-  width: 600px;
-  height: 350px;
+
+.sidebar img:last-child {
+  margin-bottom: 0;
 }
 .section {
   margin-bottom: 30px;
@@ -366,7 +318,6 @@ footer {
   width: 730px;
   margin: 0 auto;
   margin-top: 10px;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -392,13 +343,13 @@ footer {
 .contact-map {
   position: relative;
   width: 90%;
-  max-width: 1575px; /* Haritanın genişliğine uygun olacak şekilde ayarladım */
+  max-width: 1575px;
   margin: 0 auto;
   color: #092144;
 }
 .map-text {
   position: absolute;
-  left: 100px; /* Sol alta yazmak için ayarlandı */
+  left: 100px;
   bottom: 0px;
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -446,18 +397,20 @@ footer {
   color: white;
   display: flex;
   justify-content: center;
+  margin-bottom: 90px;
 }
 .services-container {
   padding-top: 50px;
+  margin-bottom: 40px;
 }
 .srvc {
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 .srvc img {
   padding-top: 0px;
-  height: 170px;
+  height: 250px;
+  border-radius: 2px;
 }
-.services-container {
-  height: 1000px;
+.img2 {
+  height: 325px !important;
 }
